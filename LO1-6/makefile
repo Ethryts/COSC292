@@ -1,6 +1,5 @@
 CC = gcc
-CFLAGS = -Wall -O2
-
+CFLAGS = -Wall -O2 
 program: program.o
 	$(CC) -o $@ $^ && ./$@
 

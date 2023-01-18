@@ -2,18 +2,32 @@
 #include <stdlib.h>
 #include <string.h>
 
+void readStringGets(char* cPtr);
+void printString(char* cPtr);
 
 int main()
 {
-    char cArray[10];
-    int iReturns;
+    // char cArray[10];
+/*     int iReturns; */
 
-    // Test 1 - user scanf to input a string
+    /* Test 1 - user scanf to input a string
     printf("Enter a string: ");
     iReturns = scanf("%9s",cArray);
     printf("%10s\n",cArray);
-    printf("%i\n",iReturns);
+    printf("%i\n",iReturns); */
+
+    char c = getchar();
+    while(c!= '\n' && c != EOF)
+    {
+
+        printf("%c", c);
+        c = getchar();
+    }
+    // readStringGets(cArray);
+    // printString(cArray);
+
     return EXIT_SUCCESS;
+
 
 }
 
@@ -29,6 +43,15 @@ int readNumbers() {
 
 
 
+void printNumbers(int* iPtr, int iSize)
+{
+    printf("The numbers to be printed are:\n");
+    for(int i=0;i<iSize; i++)
+        {
+            printf("%d\n",iPtr[i]);
+        }
+}
+
 void readString(char* cPtr, char* cLengthptr)
 {
     char cFormat[4];
@@ -37,8 +60,15 @@ void readString(char* cPtr, char* cLengthptr)
     strcat(cFormat, cLengthptr);
     strcat(cFormat, "s");
     printf("Enter a string: ");
-    scanf(cFormat, cPtr);
+    
+    printf("%d",scanf(cFormat, cPtr) );
 
+}
+
+void readStringGets(char* cPtr)
+{
+    printf("Enter a big honking string: ");
+    // gets(cPtr);
 }
 
 void printString(char* cPtr)
