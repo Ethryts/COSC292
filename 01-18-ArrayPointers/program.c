@@ -21,6 +21,10 @@ void testBytePrinter(int iValue){
     }
 }
 
+//First have the user enter a string including spaces.
+// the n call a function called printStringAsInts in array_pointers.c that will take in a string and printit out as ints both in hex and decimal
+// hint look up the strlen function
+// considers what limitations this function may have
 
 void testEncodeDecode()
 {
